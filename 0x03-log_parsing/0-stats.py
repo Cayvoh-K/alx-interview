@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a script that reads stdin line and compute metrics
+a script that reads stdin line by line and computes metrics
 """
 
 import sys
@@ -12,7 +12,7 @@ counter = 0
 
 try:
     for line in sys.stdin:
-        line_list = line.split("")
+        line_list = line.split(" ")
         if len(line_list) > 4:
             code = line_list[-2]
             size = int(line_list[-1])
