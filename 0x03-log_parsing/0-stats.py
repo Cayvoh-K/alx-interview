@@ -15,7 +15,7 @@ try:
         line = line.strip()
         # parse the line
         try:
-            ip_address, date, request, status_code, file_size = line.split('')
+            ip_address, date, request, status_code, file_size = line.split()
             if request != "GET /projects/260 HTTP/1.1":
                 continue
             status_code = int(status_code)
