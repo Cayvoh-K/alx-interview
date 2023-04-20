@@ -20,7 +20,7 @@ def validUTF8(data):
                 num_bytes = 2
             elif (byte >> 3) == 0b11110:
                 num_bytes = 3
-            elif (byte >> 7) == 0b1:
+            elif (byte >> 7):
                 return False
         else:
             if (byte >> 6) != 0b10:
