@@ -5,7 +5,11 @@ UTF-8 Validation
 
 
 def validUTF8(data):
-    # Number of bytes in the current UTF-8 character
+    """
+    data: a list of integers
+    Return:True if data is a valid UTF-8
+    encoding, else return False
+    """
     num_bytes = 0
 
     for byte in data:
