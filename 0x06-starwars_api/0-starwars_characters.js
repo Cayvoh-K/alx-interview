@@ -9,9 +9,9 @@ if (!movieId) {
   process.exit(1);
 }
 
-const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
+const url = `https://swapi-api.hbtn.io/api/films/${movieId}`;
 
-request(apiUrl, { json: true }, (err, res, body) => {
+request(url, { json: true }, (err, res, body) => {
   if (err) {
     console.error(`Error: ${err.message}`);
     process.exit(1);
