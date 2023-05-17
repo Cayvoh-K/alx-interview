@@ -21,3 +21,5 @@ def makeChange(coins, total):
         return -1
     else:
         return min_coins[total]
+        O(amount * len(coins))
+        O(amount)
