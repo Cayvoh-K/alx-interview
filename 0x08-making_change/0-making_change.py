@@ -2,6 +2,7 @@
 """
 a list to track the fewest number of coins needed for each total
 """
+import sys
 
 
 def makeChange(coins, total):
