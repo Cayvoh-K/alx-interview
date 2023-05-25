@@ -8,6 +8,8 @@ def island_perimeter(grid):
     if not grid or not grid[0]:
         return 0
 
+    perimeter = 0
+
     for i, row in enumerate(grid):
         for j, cell in enumerate(row):
             if cell == 1:
