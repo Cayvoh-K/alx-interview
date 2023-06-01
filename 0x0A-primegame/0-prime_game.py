@@ -41,21 +41,21 @@ def isWinner(x, nums):
         primes = generate_primes(n)
         remaining_numbers = set(range(1, n + 1))
 
-    for _ in range(x):
-        current_player = "Maria"
-        while True:
-            valid_primes = [p for p in primes if p in remaining_numbers]
-            if not valid_primes:
-                break
+        for _ in range(x):
+            current_player = "Maria"
+            while True:
+                valid_primes = [p for p in primes if p in remaining_numbers]
+                if not valid_primes:
+                    break
 
-            chosen_prime = max(valid_primes)
-            remaining_numbers -= set(range(chosen_prime, n + 1, chosen_prime))
-            current_player = "Maria" if current_player == "Ben" else "Ben"
+                chosen_prime = max(valid_primes)
+                remaining_numbers -= set(range(chosen_prime, n + 1, chosen_prime))
+                current_player = "Maria" if current_player == "Ben" else "Ben"
 
-        if current_player == "Maria":
-            winners["Ben"] += 1
-        else:
-            winners["Maria"] += 1
+            if current_player == "Maria":
+                winners["Ben"] += 1
+            else:
+                winners["Maria"] += 1
 
     if winners["Maria"] > winners["Ben"]:
         return "Maria"
