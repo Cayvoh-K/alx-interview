@@ -6,6 +6,14 @@ module game of choosing Prime numbers
 
 
 def isWinner(x, nums):
+    """
+    Determines winner of Prime Game
+    Args:
+        x (int): no. of rounds of game
+        nums (int): upper limit of range for each round
+    Return:
+        Name of winner (Maria or Ben) or None if winner cannot be found
+    """
     def generate_primes(n):
         """Return list of prime numbers between 1 and n inclusive
            Args:
