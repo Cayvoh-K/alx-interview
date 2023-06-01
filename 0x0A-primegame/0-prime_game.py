@@ -7,6 +7,10 @@ module game of choosing Prime numbers
 
 def isWinner(x, nums):
     def generate_primes(n):
+        """Return list of prime numbers between 1 and n inclusive
+           Args:
+            n (int): upper boundary of range. lower boundary is always 1
+        """
         primes = []
         is_prime = [True] * (n + 1)
         p = 2
